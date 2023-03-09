@@ -1,4 +1,4 @@
-
+# encoder written by travis Shepherd
 def encoder(string):
     original_password = string
     encoded_password = ''
@@ -19,9 +19,30 @@ def encoder(string):
     return encoded_password
 
 
+def menu():
+    print("""
+    Menu  
+------------- 
+1. Encode  
+2. Decode  
+3. Quit 
+ 
+Please enter an option:""")
+
+
+x = 1
+
+
 def main():
-    password = input("type password")
-    print(encoder(password))
+    while x == 1:
+        menu()
+        user_choice = int(input())
+        if user_choice == 1:
+            original_password = str(input('Please enter your password to encode:'))
+            encoded_password = encoder(original_password)
+            print('Your password has been encoded and stored!')
+
+
 
 
 if __name__ == '__main__':
