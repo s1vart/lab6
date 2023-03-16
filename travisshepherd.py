@@ -18,7 +18,6 @@ def encoder(string):
                 encoded_password += encoded_password_addon
     return encoded_password
 
-
 def menu():
     print("""
     Menu  
@@ -41,7 +40,10 @@ def main():
             original_password = str(input('Please enter your password to encode:'))
             encoded_password = encoder(original_password)
             print('Your password has been encoded and stored!')
-
+        elif user_choice == 2:
+            print(f"The encoded password is {encoded_password}, and the original password {original_password}")
+        elif user_choice == 3:
+            break
 
 
 
